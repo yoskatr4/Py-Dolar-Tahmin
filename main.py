@@ -21,7 +21,7 @@ model = ARIMA(data, order=(1, 1, 1))  # Örnek olarak (p, d, q) = (1, 1, 1)
 model_fit = model.fit()
 
 # Gelecekteki döviz kuru tahminini yapın
-future_date = pd.to_datetime('2023-07-20')  # Tahmin yapmak istediğiniz tarih
+future_date = pd.to_datetime('2023-07-15')  # Tahmin yapmak istediğiniz tarih
 
 # Veri çerçevesini genişletin
 data_extended = data.reindex(data.index.union(pd.Index([future_date])))
